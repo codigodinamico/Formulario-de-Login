@@ -1,0 +1,115 @@
+*,::before,::after{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background: linear-gradient(120deg, #cbd6fb, #430bfb);
+}
+h1{
+  margin: 0;
+}
+.form_conteiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form{
+  width: 370px;
+  padding: 64px 32px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px #363131e6;
+}
+.form_title{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.form_div{
+  position: relative;
+  height: 48px;
+  margin-bottom: 24px;
+}
+.form_input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: 2px solid #cfcece;
+  border-radius: 8px;
+  outline: none;
+  padding: 16px;
+  background: none;
+  z-index: 1;
+}
+.form_label{
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 0 4px;
+  background-color: #fff;
+  color: #ababab;
+  font-size: 18px;
+  transition: .5s;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  margin: 5px 0px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  background: #0468f3;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2796e0;
+}
+.signup_link{
+  margin: 30px 0 0 0;
+  font-size: 16px;
+  text-align: center;
+  color: #707070;
+}
+.signup_link a{
+  color: #0468f3;
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: none;
+}
+.form_input:focus + .form_label{
+  top: -8px;
+  left: 12.8px;
+  color: #0468f3;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+.form_input:not(:placeholder-shown).form_input:not(:focus)+ .form_label{
+  top: -8px;
+  left: 12.8px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+.form_input:focus{
+  border: 2px solid #0468f3;
+}
